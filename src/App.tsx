@@ -11,8 +11,8 @@ function App() {
 const Button = styled.button`
   background-color: pink;
   color: white;
-  font-size: 16px;
-  padding: 8px 16px;
+  font-size: 18px;
+  padding: 8px 18px;
   border: none;
   cursor: pointer;
 `;
