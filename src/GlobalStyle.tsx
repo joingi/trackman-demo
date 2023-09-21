@@ -4,9 +4,15 @@ export const GlobalStyle = createGlobalStyle`
     :root{
         --color-black :#090909;
         --color-white : #FFF;
-        --color-orange:#EC691A;
+        --color-orange-primary:#EC691A;
+        --color-surface-secondary:#141414;
+        --color-text-primary:#FFF;
+        --color-box-secondary:#414141;
+        --color-details-secondary:#343434;
 
         --fontSize-nav-text:15px;
+        --fontSize-header:25px;
+        --fontSize-body-text:20px;
     }
     
     body {
