@@ -63,7 +63,10 @@ export const CoursesList: FC = () => {
         <StyledCourseListContainer>
           {data?.products?.map((course) => (
             <CourseItem
-              onClickHandler={() => setCurrentCourse(course)}
+              onClickHandler={() => {
+                setCurrentCourse(course);
+                window.scrollTo({ top: 110, left: 100, behavior: "smooth" });
+              }}
               key={course.id}
               id={course.id}
               title={course.title}

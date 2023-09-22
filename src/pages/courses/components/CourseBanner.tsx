@@ -10,8 +10,27 @@ const CourseBannerContainer = styled(Flex)`
   position: relative;
 `;
 
+const ImageWrapper = styled.div`
+  width: 830px;
+  height: 630px;
+  position: relative;
+`;
+
+const ImageOverlay = styled.div`
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0) 58.79%
+  );
+`;
+
 const StyledCourseBannerImage = styled.img`
-  max-width: 830px;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
@@ -25,7 +44,7 @@ const StyledCourseInformationContainer = styled(Flex)`
   z-index: 111;
 `;
 
-const StykedCourseItemTitle = styled.p`
+const StyledCourseItemTitle = styled.p`
   color: var(--color-text-primary);
   font-size: 60px;
   font-style: normal;
@@ -34,7 +53,7 @@ const StykedCourseItemTitle = styled.p`
   letter-spacing: 1.8px;
 `;
 
-const StykedCourseItemDescription = styled.p`
+const StyledCourseItemDescription = styled.p`
   color: var(--color-text-primary);
   font-size: var(--fontSize-body-text);
   font-style: normal;
@@ -61,20 +80,24 @@ type CourseBannerPropsType = {
 export const CourseBaanner: FC<CourseBannerPropsType> = ({ courseItem }) => {
   return (
     <CourseBannerContainer alignItems="center">
-      <StyledCourseBannerImage
-        src={courseItem.thumbnail}
-        alt={courseItem.title}
-      />
+      <ImageWrapper>
+        <ImageOverlay />
+
+        <StyledCourseBannerImage
+          src={courseItem.thumbnail}
+          alt={courseItem.title}
+        />
+      </ImageWrapper>
 
       <StyledCourseInformationContainer
         flexDirection="column"
         justifyContent="center"
         gap="25px"
       >
-        <StykedCourseItemTitle>{courseItem.title}</StykedCourseItemTitle>
-        <StykedCourseItemDescription>
+        <StyledCourseItemTitle>{courseItem.title}</StyledCourseItemTitle>
+        <StyledCourseItemDescription>
           {courseItem.description}
-        </StykedCourseItemDescription>
+        </StyledCourseItemDescription>
         <StyledSubmitButton>More</StyledSubmitButton>
       </StyledCourseInformationContainer>
     </CourseBannerContainer>
