@@ -12,7 +12,7 @@ const HeaderContainer = styled(Flex)`
 `;
 
 const FindSimulatorText = styled.div`
-  color: var(--color-orange);
+  color: var(--color-orange-primary);
   font-size: var(--fontSize-nav-text);
   font-style: normal;
   font-weight: 400;
@@ -20,19 +20,20 @@ const FindSimulatorText = styled.div`
   letter-spacing: 1.5px;
   text-transform: uppercase;
   cursor: pointer;
-  margin-left: auto;
 `;
 
 export const Header: FC = () => {
   return (
-    <HeaderContainer alignItems="center" gap="90px">
+    <HeaderContainer alignItems="center" justifyContent="space-between">
+      <Flex gap="90px">
+        <Link to="/">
+          <img width="103px" src={Logo} alt="Trackman" />
+        </Link>
+        <NavigationBar />
+      </Flex>
       <Link to="/">
-        <img width="103px" src={Logo} alt="Trackman" />
+        <FindSimulatorText>Find a simulator</FindSimulatorText>
       </Link>
-      <NavigationBar />
-      <FindSimulatorText>
-        <Link to="/">Find a simulator</Link>
-      </FindSimulatorText>
     </HeaderContainer>
   );
 };
