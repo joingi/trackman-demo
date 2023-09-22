@@ -7,6 +7,7 @@ import {
   LeaderBoardItemPropsType,
 } from "./components/LeaderBoardItem";
 import { Button } from "app/components/Button";
+import { Link } from "react-router-dom";
 
 const LeaderBoardContainer = styled(Flex)`
   background-color: var(--color-surface-secondary);
@@ -53,7 +54,9 @@ export const LeaderBoard: FC<LeaderBoardPropsType> = ({ leaderBoardItems }) => {
           />
         ))}
       </LeaderBooardItemsContainer>
-      <Button>Show More Courses</Button>
+      <Link to="/courses">
+        <Button>Show More Courses</Button>
+      </Link>
     </LeaderBoardContainer>
   );
 };
