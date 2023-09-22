@@ -2,7 +2,7 @@ import { FC } from "react";
 import styled from "styled-components";
 
 const StyledNavigationItem = styled.a`
-  color: var(--color-white);
+  color: var(--color-text-primary);
   font-size: var(--fontSize-nav-text);
   text-transform: uppercase;
   font-style: normal;

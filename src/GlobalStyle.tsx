@@ -3,12 +3,12 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
     :root{
         --color-black :#090909;
-        --color-white : #FFF;
         --color-orange-primary:#EC691A;
         --color-surface-secondary:#141414;
         --color-text-primary:#FFF;
         --color-box-secondary:#414141;
         --color-details-secondary:#343434;
+        --colors-box-primary:#212121;
 
         --fontSize-nav-text:15px;
         --fontSize-header:25px;
@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     body {
-          background: #fafafa;
+          background: var(--color-black);
           font-family: "Poppins", sans-serif;
           margin: 0;
         }

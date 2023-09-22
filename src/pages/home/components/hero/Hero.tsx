@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Flex } from "../../../../components/Flex";
 import { LeaderBoard } from "./components/leader-board/LeaderBoard";
 
-const StyledHeroContainer = styled.div`
+const StyledHeroContainer = styled(Flex)`
   background-image: url("./HeroImage.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,11 +33,17 @@ const leaderBoardItems = [
     playerName: "Tiger Woods",
     playerscore: -9,
   },
+  {
+    id: 4,
+    playerPosition: "3",
+    playerName: "Tiger Woods",
+    playerscore: -9,
+  },
 ];
 
 export const Hero: FC = () => {
   return (
-    <StyledHeroContainer>
+    <StyledHeroContainer alignItems="center">
       <Container>
         <Flex justifyContent="center" alignItems="center">
           <LeaderBoard leaderBoardItems={leaderBoardItems} />
